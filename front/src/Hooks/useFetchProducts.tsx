@@ -16,7 +16,7 @@ const useFetchProducts = () => {
         setLoading(true);
         setError(null);
         try {
-            let url = 'https://pf-ecommerce-henry.onrender.com/products/';
+            let url = 'https://moda-urbana-ecommerce.onrender.com/products/';
 
             if (nameFilter || categoryFilter || genderFilter) {
                 const queryParams = new URLSearchParams({
@@ -25,7 +25,7 @@ const useFetchProducts = () => {
                     gender: genderFilter,
                 }).toString();
 
-                url = `https://pf-ecommerce-henry.onrender.com/filter?${queryParams}`;
+                url = `https://moda-urbana-ecommerce.onrender.com/filter?${queryParams}`;
             }
 
             const response = await fetch(url);

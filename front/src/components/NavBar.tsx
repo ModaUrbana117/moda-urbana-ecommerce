@@ -11,7 +11,7 @@ export default function NavBar() {
 
   useEffect(() => {
     if (user) {
-      axios.post("https://pf-ecommerce-henry.onrender.com/user/register", { user });
+      axios.post("https://moda-urbana-ecommerce.onrender.com/user/register", { user });
     }
   }, [user]);
 

@@ -39,7 +39,7 @@ module.exports = {
 /*try {
     const body = await req.json()
     const session = await stripe.checkout.session.Create({
-      seccess_url:"https://pf-ecommerce-henry.onrender.com/success",
+      seccess_url:"https://moda-urbana-ecommerce.onrender.com/success",
       line_items:[{
         price_data:{
           currency: "usd",

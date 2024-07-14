@@ -35,7 +35,7 @@ const Filters: React.FC<FiltersProps>  = ({
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('https://pf-ecommerce-henry.onrender.com/categories/');
+                const response = await fetch('https://moda-urbana-ecommerce.onrender.com/categories/');
                 const data = await response.json();
                 setCategories(data);
             } catch (error) {

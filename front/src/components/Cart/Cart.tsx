@@ -40,12 +40,12 @@ const Cart = () => {
       try {
         const userEmail = user.email;
         const userResponse = await axios.get(
-          `https://pf-ecommerce-henry.onrender.com/user/by-email?email=${userEmail}`
+          `https://moda-urbana-ecommerce.onrender.com/user/by-email?email=${userEmail}`
         );
         const userData = userResponse.data;
         const userId = userData.id;
 
-        const linkGetCartProducts = `https://pf-ecommerce-henry.onrender.com/order/?id=${userId}`;
+        const linkGetCartProducts = `https://moda-urbana-ecommerce.onrender.com/order/?id=${userId}`;
 
 
 
@@ -54,7 +54,7 @@ const Cart = () => {
         setCartProducts(cartProducts);
 
         const productRequests = cartProducts.map((cartProduct: CartProduct) =>
-          axios.get(`https://pf-ecommerce-henry.onrender.com/products/${cartProduct.product_id}`)
+          axios.get(`https://moda-urbana-ecommerce.onrender.com/products/${cartProduct.product_id}`)
         );
 
         const productResponses = await Promise.all(productRequests);
@@ -100,7 +100,7 @@ const Cart = () => {
     console.log(productId);
     try {
       const deleteProductResponse = await axios.delete(
-        `https://pf-ecommerce-henry.onrender.com/order/delete/${productId}`
+        `https://moda-urbana-ecommerce.onrender.com/order/delete/${productId}`
       );
       if (deleteProductResponse.status === 200) {
         const updatedCartProducts = cartProducts.filter(

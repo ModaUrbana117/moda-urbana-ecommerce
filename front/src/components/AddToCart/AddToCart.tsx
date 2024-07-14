@@ -26,10 +26,10 @@ const AddToCart: FC<ButtonCartProps> = ({
       return;
     }
 
-    const link = "https://pf-ecommerce-henry.onrender.com/order/add";
+    const link = "https://moda-urbana-ecommerce.onrender.com/order/add";
     try {
       const userDb = await axios.get(
-        `https://pf-ecommerce-henry.onrender.com/user/by-email?email=${userEmail}`
+        `https://moda-urbana-ecommerce.onrender.com/user/by-email?email=${userEmail}`
       );
 
       const userData = userDb.data;

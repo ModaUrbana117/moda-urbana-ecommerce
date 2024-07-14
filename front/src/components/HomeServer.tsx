@@ -6,7 +6,7 @@ export default async function HomeServer() {
     const user = session?.user;
     console.log(user)   
 
-    const response = await fetch('https://pf-ecommerce-henry.onrender.com/products/');
+    const response = await fetch('https://moda-urbana-ecommerce.onrender.com/products/');
     const initialProducts = await response.json();
 
     return (
